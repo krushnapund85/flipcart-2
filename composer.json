@@ -38,7 +38,8 @@
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/views_slideshow": "^5.0",
         "drupal/zooming": "^1.1",
-        "drush/drush": "*"
+        "drush/drush": "*",
+        "psr/log": "~1.1"
     },
     "conflict": {
         "drupal/drupal": "*"
