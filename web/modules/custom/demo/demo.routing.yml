@@ -1,0 +1,17 @@
+demo.myform:
+  path: '/demo/myform'
+  defaults:
+    _title: 'My demo Form'
+    _form: '\Drupal\demo\Form\MyDemoForm'
+  requirements:
+    _permission: 'access content'
+    _access: 'TRUE'
+demo.my_demo_config:
+  path: '/admin/config/my-demo'
+  defaults:
+    _form: 'Drupal\demo\Form\MyDemoConfigForm'
+    _title: 'My Demo Configurations'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

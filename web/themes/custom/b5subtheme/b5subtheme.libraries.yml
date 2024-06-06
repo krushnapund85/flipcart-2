@@ -1,0 +1,18 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+      css/custom-style.css: {}
+  js:
+    js/b5subtheme.js: {}
+drupal.nav-tabs:
+  version: '5.2.3'
+  js:
+    js/nav-tabs.js: {}
+  dependencies:
+    - core/matchmedia
+    - core/jquery
+    - core/drupal
+    - core/once
+    - core/drupal.debounce
+    - core/collapse

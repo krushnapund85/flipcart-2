@@ -1,0 +1,75 @@
+ 	<div class="container-fliud text-info mb-3" style="background-color:#007bff !important;">
+			<nav class="navbar navbar-expand-sm maxx" style="background:#e8e8e8">  
+ 				 <ul class="row navbar-nav" style="float:left">
+					  <li class="nav-item mr-sm-3"> 
+					  </li>
+					 	<div class="row">
+							<div class="col-md-6">
+							<h3 -calss="pt-5" style="color:black;padding-top:27px;">My Flipcart Demo</h3>
+							   </div>
+ 							  <div class="col-md-6">
+									{{ page.nav_additional }}
+								</div>
+						</div>	  
+							<div class="row">
+								<div class="col-md-12 dropdown">
+									<div class="row" style="display:flex;background-color:white">  
+										{{ page.nav_main }}
+									</div>	
+								</div>		 
+							</div>
+					</ul>
+				</div> 
+			</nav>
+			{% endif %}
+		</div> 
+			<div class="container-fliud mb-2">   
+				</div>
+				{% if page.sidebar_first %}
+				<div class="row mt-1 pt-2" style="background-color:white;padding-right:20px"> 
+					<div class="col-md-2 mb-3 ">
+						{{ sidebar_first_classes }} {{ page.sidebar_first }}
+				    </div>
+					{% endif %}
+						{% if page.content %}	
+                        <div class="col-md-10">
+                             {{ content_classes }} {{ page.content }}
+                        </div> 
+			    </div> 
+				{% endif %}
+		 		<!--- footer--->
+				<div class="container-fliud">
+				{% if page.footer_top %}
+					<div class="row">
+						{{ page.footer_top }}
+					</div>
+					{% endif %}
+					 
+						<div class="row">  
+						 {% if page.footer_first_column %}
+ 							<div class="col-md-3">
+								{{ page.footer_first_column }}
+							</div>
+							{% endif %}
+							 {% if page.footer_second_column %}
+								<div class="col-md-3">
+									{{ page.footer_second_column }}
+							    </div>
+								{% endif %}
+								 {% if page.footer_third_column %}
+									<div class="col-md-3">
+										{{ page.footer_third_column }}
+									</div> 
+									{% endif %}
+									 {% if page.footer_forth_column %}
+										<div class="col-md-3">
+											{{ page.footer_forth_column }}
+										</div> 
+										{% endif %}
+										{% if page.footer_bottom %}
+											<div class="row">
+												{{ page.footer_bottom }}
+											</div> 
+				</div>
+				{% endif %}
+			</div>

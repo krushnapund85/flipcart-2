@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * B5 subtheme theme file.
+ */
+function b5subtheme_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  if (\Drupal::currentUser()->isAuthenticated() ) {
+    $suggestions[] = $hook . '__' . 'logged_in';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function b5subtheme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+	$suggestions[] = 'page__' . $node->bundle();
+  }
+}
+/*function hook_preprocess_menu__main_menu(&$vars) {
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if($node->field_menu_highlights){
+    $highlight_values = $node->get('field_menu_highlights')->getValue();
+
+    foreach ($highlight_values as $key => $item){
+      $ent = \Drupal\paragraphs\Entity\Paragraph::load($item['target_id']);
+      $vars['highlight'][$key]['title'] = 'Title here';
+      $vars['highlight'][$key]['desc'] = 'Description here';
+      
+    }
+  }
+}*/

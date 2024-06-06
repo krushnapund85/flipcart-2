@@ -1,0 +1,7 @@
+name: Common
+core: 8.x
+type: module
+description: This module contains common functionality
+package: custom
+core_version_requirement: ^8 || ^9
+

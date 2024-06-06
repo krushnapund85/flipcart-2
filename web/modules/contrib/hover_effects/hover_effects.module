@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Conatins hover_effects.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function hover_effects_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.hover_effects':
+      return t('"Hover Effects" module will provides 30+ Hover effects on your square and circle images. There are no configurations. Enable the module and use the HTML structures from the demo pages mentioned on project page.');
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function hover_effects_page_attachments(&$page) {
+  if (!\Drupal::service('router.admin_context')->isAdminRoute()) {
+    $page['#attached']['library'][] = 'hover_effects/hover_effects';
+  }
+}

@@ -1,0 +1,11 @@
+name: Hover Effects
+type: module
+description: This module provides 30+ hover effects.
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: media
+
+# Information added by Drupal.org packaging script on 2020-08-20
+version: '1.0.2'
+project: 'hover_effects'
+datestamp: 1597899453

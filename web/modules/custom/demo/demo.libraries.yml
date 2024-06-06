@@ -1,0 +1,12 @@
+demo.demo_js:
+  version: 1.x
+  css:
+    theme:
+      css/demo.css: {}
+  js:
+    js/demo.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/ajax
+

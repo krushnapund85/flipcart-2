@@ -1,0 +1,7 @@
+common.home_page:
+ path: '/home'
+ defaults:
+   _controller: '\Drupal\common\Controller\WelcomePageController::homePage'
+   _title: 'WELCOME PAGE'
+ requirements:
+   _permission: 'access content'

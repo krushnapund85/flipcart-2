@@ -1,0 +1,4 @@
+services:
+  demo_base64:
+    class: Drupal\demo\Services\DemoService
+    arguments: ['@database', '@language_manager',]

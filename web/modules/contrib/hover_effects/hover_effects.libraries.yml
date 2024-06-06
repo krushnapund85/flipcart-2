@@ -1,0 +1,4 @@
+hover_effects:
+  css:
+    theme:
+      css/ihover.css: {}
